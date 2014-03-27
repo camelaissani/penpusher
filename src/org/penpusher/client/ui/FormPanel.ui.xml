@@ -1,0 +1,82 @@
+<!-- Penpusher allows users to create corporate documents from templates.        -->
+<!-- Copyright (C) 2010  Camel AISSANI                                           -->
+<!--                                                                             -->
+<!-- This program is free software: you can redistribute it and/or modify        -->
+<!-- it under the terms of the GNU Affero General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or           -->
+<!-- (at your option) any later version.                                         -->
+<!--                                                                             -->
+<!-- This program is distributed in the hope that it will be useful,             -->
+<!-- but WITHOUT ANY WARRANTY; without even the implied warranty of              -->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the               -->
+<!-- GNU Affero General Public License for more details.                         -->
+<!--                                                                             -->
+<!-- You should have received a copy of the GNU Affero General Public License    -->
+<!-- along with this program.  If not, see <http://www.gnu.org/licenses/>.       -->
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:pp='urn:import:org.penpusher.client.ui'>
+
+	<ui:style type='org.penpusher.client.ui.FormPanel.FormStyle'>
+	.form {
+		padding-left:10px;
+		border-top: 1px solid #ccc;
+	}
+	
+	.captionPanel {
+		padding-top:20px;
+		padding-bottom:20px;
+		border:1px solid #ccc;
+		color: #000;
+	}
+	
+	.entriesTable {
+	    border-left-style:none;
+	    border-right-style:none;
+		padding:0px 0px 15px 0px;
+		width: 100%;
+	}
+	
+	.description {
+		font-size: 12px;
+		font-family: Arial, Helvetica;
+		border:1px solid #ddd;
+		background:#fafafa;
+		width:510px;
+	}
+	
+	.error {
+		width:100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border:1px solid #ddd;
+		background-color: #FBEFEF;
+	}
+	
+	.errorLabel {
+		padding-left: 10px;
+		font-size: 14px;
+		font-family: Arial, Helvetica;
+	}
+	
+	</ui:style>
+	
+	
+	<g:DockLayoutPanel unit='PX'>
+		<g:north size='20'>
+			<pp:ToolBar ui:field='toolbar'/>
+		</g:north>
+		<g:center>
+			<g:ScrollPanel styleName='{style.form}'>
+			   	<g:VerticalPanel>
+			   		<g:HorizontalPanel ui:field="errorPanel" styleName='{style.error}'>
+				   		<g:Label ui:field="errorLabel" styleName='{style.errorLabel}'/>
+			   		</g:HorizontalPanel>
+			   		<g:FlexTable ui:field="fileTable"/>      
+					<g:VerticalPanel ui:field="entriesTable" styleName='{style.entriesTable}'/>
+				</g:VerticalPanel>
+			</g:ScrollPanel>
+		</g:center>
+	</g:DockLayoutPanel>
+	
+</ui:UiBinder>

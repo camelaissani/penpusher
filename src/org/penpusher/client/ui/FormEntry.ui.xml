@@ -1,0 +1,78 @@
+<!-- Penpusher allows users to create corporate documents from templates.        -->
+<!-- Copyright (C) 2010  Camel AISSANI                                           -->
+<!--                                                                             -->
+<!-- This program is free software: you can redistribute it and/or modify        -->
+<!-- it under the terms of the GNU Affero General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or           -->
+<!-- (at your option) any later version.                                         -->
+<!--                                                                             -->
+<!-- This program is distributed in the hope that it will be useful,             -->
+<!-- but WITHOUT ANY WARRANTY; without even the implied warranty of              -->
+<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the               -->
+<!-- GNU Affero General Public License for more details.                         -->
+<!--                                                                             -->
+<!-- You should have received a copy of the GNU Affero General Public License    -->
+<!-- along with this program.  If not, see <http://www.gnu.org/licenses/>.       -->
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:pp='urn:import:org.penpusher.client.ui'>
+
+	<ui:style type='org.penpusher.client.ui.FormEntry.FormEntryStyle'>	
+	.label {
+		width:100%;
+		vertical-align:middle;
+	    color:#303030;
+	}
+	
+	.datebox,
+	.textbox, 
+	.textarea,
+	.listbox {
+		font-size: 12px;
+		font-family: Arial, Helvetica;
+		border:1px solid #ddd;
+		background:#fafafa;
+	    width:250px;
+	}
+	
+	.textbox:hover, .textbox:focus,
+	.textarea:hover, .textarea:focus, 
+	.listbox:hover, .listbox:focus,
+	.datebox:hover, .datebox:focus {
+		border-color:#c5c5c5;
+		background:#f6f6f6;
+	}
+	
+	.valid {
+		vertical-align:top;
+		padding:0px 10px 10px 0px;
+		color:black;
+		font-weight: normal;	
+	}
+
+	.notvalid {
+		vertical-align:top;
+		padding:0px 10px 10px 0px;	
+		color:#FA5858;
+		font-weight: bold;
+	}
+		
+	.notvalid .datebox,
+	.notvalid .textbox, 
+	.notvalid .textarea,
+	.notvalid .listbox{
+		font-size: 12px;
+		font-family: Arial, Helvetica;
+		border:1px solid #F5A9A9;
+		background:#fafafa;
+	    width:250px;
+	}
+	</ui:style>
+	
+
+   	<g:VerticalPanel ui:field="entry" styleName='{style.valid}'>
+   		<g:Label ui:field="entryLabel"/>
+	</g:VerticalPanel>
+	
+	
+</ui:UiBinder>
